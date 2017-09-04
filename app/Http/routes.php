@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','UserController@index');
+Route::post('/register','UserController@register');
+
+Route::get('/confirmation','UserController@confirmation');
