@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cbcbbd9a-95fa-4773-97d5-80505d95eb1f" name="farmhub" url="http://farmhub.info">
+        <fileTransfer host="farmhub.info" port="21" rootFolder="/laravel">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

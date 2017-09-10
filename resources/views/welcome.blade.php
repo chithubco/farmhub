@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <img src="{{ URL::to('app/img/fmdb_logo.png') }}">
 
-                    <div class="panel-heading"><h1 class="page-header text-overflow">Farmers Registeration Form</h1></div>
+                    <div class="panel-heading"><h1 class="page-header text-overflow">FarmHub Farmers Registeration Form</h1></div>
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                             {{ csrf_field() }}
@@ -16,7 +16,7 @@
                                 <label for="phone_number" class="col-md-4 control-label">Mobile Phone</label>
 
                                 <div class="col-md-6">
-                                    <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ session('phone_number') }}">
+                                    <input id="phone_number" type="text" placeholder="08057775603" class="form-control" name="phone_number" value="{{ session('phone_number') }}">
 
                                     @if ($errors->has('phone_number'))
                                         <span class="help-block">
@@ -29,7 +29,7 @@
                                 <label for="business_name" class="col-md-4 control-label">Business Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="business_name" value="{{ old('business_name') }}">
+                                    <input id="name" type="text" class="form-control" placeholder="M & C FARMS LTD" name="business_name" value="{{ old('business_name') }}">
                                     <small class="text-muted">If applicable</small>
                                     @if ($errors->has('business_name'))
                                         <span class="help-block">
@@ -38,11 +38,14 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="media pad-top bord-top">
+
+                            </div>
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                 <label for="first_name" class="col-md-4 control-label">First Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
+                                    <input id="name" type="text" class="form-control" PLACEHOLDER="MUSA" name="first_name" value="{{ old('first_name') }}">
 
                                     @if ($errors->has('first_name'))
                                         <span class="help-block">
@@ -55,7 +58,7 @@
                                 <label for="name" class="col-md-4 control-label">Middle Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="middle_name" type="text" class="form-control" name="middle_name" value="{{ old('middle_name') }}">
+                                    <input id="middle_name" type="text" placeholder="James" class="form-control" name="middle_name" value="{{ old('middle_name') }}">
 
                                     @if ($errors->has('middle_name'))
                                         <span class="help-block">
@@ -68,7 +71,7 @@
                                 <label for="name" class="col-md-4 control-label">Last Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
+                                    <input id="last_name" type="text" placeholder="Adebayo" class="form-control" name="last_name" value="{{ old('last_name') }}">
 
                                     @if ($errors->has('last_name'))
                                         <span class="help-block">
@@ -76,6 +79,22 @@
                                     </span>
                                     @endif
                                 </div>
+                            </div>
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" placeholder="emeka.musa@gmail.com" class="form-control" name="email" value="{{ old('email') }}">
+
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="media pad-top bord-top">
+
                             </div>
 
                             <div class="form-group{{ $errors->has('sex') ? ' has-error' : '' }}">
@@ -130,7 +149,7 @@
                                 <label for="name" class="col-md-4 control-label">City</label>
 
                                 <div class="col-md-6">
-                                    <input id="city" type="text" class="form-control" name="city" value="{{ old('city') }}">
+                                    <input id="city" type="text" placeholder="Ikeja" class="form-control" name="city" value="{{ old('city') }}">
 
                                     @if ($errors->has('city'))
                                         <span class="help-block">
@@ -198,7 +217,7 @@
                                 <label for="alt_phone" class="col-md-4 control-label">Alternate Phone</label>
 
                                 <div class="col-md-6">
-                                    <input id="alt_phone" type="text" class="form-control" name="alt_phone" value="{{ old('alt_phone') }}">
+                                    <input id="alt_phone" type="text" placeholder="08057775603" class="form-control" name="alt_phone" value="{{ old('alt_phone') }}">
                                     <small class="text-muted">Do you have a second phone</small>
                                     @if ($errors->has('alt_phone'))
                                         <span class="help-block">
@@ -206,6 +225,10 @@
                                     </span>
                                     @endif
                                 </div>
+                            </div>
+
+                            <div class="media pad-top bord-top">
+
                             </div>
 
                             <div class="form-group{{ $errors->has('education') ? ' has-error' : '' }}">
@@ -234,9 +257,13 @@
                                 <label for="yoe" class="col-md-4 control-label">Experience Level</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="yoe" maxlength="3">
+                                    <input type="text" class="form-control" name="yoe" maxlength="3" placeholder="15">
                                     <small class="text-muted">How long have you been farming in years</small>
                                 </div>
+
+                            </div>
+
+                            <div class="media pad-top bord-top">
 
                             </div>
                             <div class="form-group{{ $errors->has('segment') ? ' has-error' : '' }}">
@@ -279,19 +306,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
 
                             <div class="form-group{{ $errors->has('constraint') ? ' has-error' : '' }}">
                                 <label for="constraint" class="col-md-4 control-label">Your Challenges</label>

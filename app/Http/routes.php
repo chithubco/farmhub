@@ -18,3 +18,4 @@ Route::get('/confirmation','UserController@confirmation');
 
 
 Route::get('/capital','FinanceController@index');
+Route::post('/capital','FinanceController@search');
