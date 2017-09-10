@@ -15,3 +15,6 @@ Route::get('/','UserController@index');
 Route::post('/register','UserController@register');
 
 Route::get('/confirmation','UserController@confirmation');
+
+
+Route::get('/capital','FinanceController@index');
